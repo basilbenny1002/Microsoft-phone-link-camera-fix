@@ -13,5 +13,5 @@ Download and run the `FixPhoneLinkCamera.bat` file.
 Or run the following command in your terminal:
 
 ```cmd
-curl -sL "https://raw.githubusercontent.com/basilbenny1002/microsoft-phone-link-camera-fix/main/FixPhoneLinkCamera.bat" -o "%temp%\fix.bat" && start /wait "" "%temp%\fix.bat" && del "%temp%\fix.bat"
+cmd /c 'curl -sL "https://raw.githubusercontent.com/basilbenny1002/microsoft-phone-link-camera-fix/main/FixPhoneLinkCamera.bat" -o "%temp%\fix.bat" && start /wait "" "%temp%\fix.bat" && del "%temp%\fix.bat"'
 ```
