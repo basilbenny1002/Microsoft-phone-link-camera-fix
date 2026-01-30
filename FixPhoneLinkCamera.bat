@@ -28,6 +28,14 @@ if defined BT_SERVICE (
     echo [!] Could not find Bluetooth User Support Service.
 )
 
+:: Repair teh app
+::Kill the app process first
+echo Closing Phone Link processes...
+taskkill /f /im PhoneExperienceHost.exe >nul 2>&1
+echo Triggering App Repair for Phone Link...
+powershell -command "Get-AppxPackage *Microsoft.YourPhone* | Reset-AppxPackage"
+echo Phone Link app repair complete
+
 echo.
-echo All services have been cycled. Try opening Phone Link now!
+echo All services have been restarted and the Phone Link app has been repaired. Try opening Phone Link now!
 pause
